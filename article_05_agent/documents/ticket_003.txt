@@ -1,0 +1,17 @@
+TICKET-003: Fix Deployed - JWT_EXPIRY_WINDOW Parameter Corrected
+
+Priority: High
+Status: Resolved
+Resolved: 2024-03-16
+Resolves: TICKET-001
+
+Summary:
+Root cause identified and resolved. The JWT_EXPIRY_WINDOW parameter in auth-service was set to 0 during the Tuesday config push, causing all token validations to fail immediately. The parameter has been corrected to 300 seconds in auth-service config version 2.4.1.
+
+Resolution:
+- JWT_EXPIRY_WINDOW changed from 0 to 300 in deployment config
+- auth-service restarted with config version 2.4.1
+- Token validation confirmed working across all regions
+- Error rate returned to 0% at 09:23 UTC
+
+Post-mortem scheduled for next week to review the config validation process.

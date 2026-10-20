@@ -1,0 +1,19 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Local data created by running the scripts
+*.db
+*.sqlite
+*.sqlite3
+chroma*/
+*chroma_db*/
+
+# Editor settings
+.vscode/
+
+article_11_agent/draw.py
+article_11_agent/graph.png

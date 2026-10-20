@@ -1,0 +1,14 @@
+TICKET-002: Database Connection Pool Exhaustion on Orders Service
+
+Priority: Medium
+Status: Resolved
+Resolved: 2024-03-10
+
+Summary:
+The orders service experienced intermittent 503 errors during peak traffic hours due to connection pool exhaustion on the primary database.
+
+Root Cause:
+Connection pool maximum was set to 10 connections, insufficient for peak load of approximately 450 requests per minute. Each request was holding connections open for an average of 2.3 seconds.
+
+Resolution:
+Connection pool maximum increased from 10 to 50. Added connection timeout of 30 seconds to prevent indefinite blocking. Deployed in release 3.1.2.

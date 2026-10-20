@@ -1,0 +1,17 @@
+TICKET-001: Authentication Service - Users Unable to Login
+
+Priority: High
+Status: Open
+Reported: 2024-03-15
+
+Summary:
+All users are reporting 401 Unauthorized errors when attempting to login. Issue began approximately two hours after the Tuesday evening deployment. The authentication service is running but rejecting valid credentials.
+
+Observations:
+- Error rate jumped from 0% to 94% after deploy at 18:45 UTC
+- Service logs show tokens being generated but immediately rejected on verification
+- No changes were made to the user database or credentials
+- Initial investigation points to a misconfiguration in the JWT_EXPIRY_WINDOW parameter introduced in the latest config push
+
+Next Steps:
+Investigate JWT_EXPIRY_WINDOW setting in auth-service configuration. This parameter controls the acceptable time window for token validation and may have been set to an incorrect value during the config update.

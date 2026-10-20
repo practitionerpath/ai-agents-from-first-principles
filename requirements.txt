@@ -1,0 +1,12 @@
+openai
+python-dotenv
+wikipedia
+requests
+ddgs
+trafilatura
+chromadb
+tiktoken
+langgraph>=1.0,<2
+langgraph-checkpoint-sqlite
+langchain-core
+pydantic>=2

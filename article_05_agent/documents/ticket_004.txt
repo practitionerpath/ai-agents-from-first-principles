@@ -1,0 +1,17 @@
+TICKET-004: Memory Leak in Notification Service
+
+Priority: Medium
+Status: In Progress
+Reported: 2024-03-18
+
+Summary:
+The notification service is showing steady heap memory growth over 24 hour periods, eventually triggering OOM restarts approximately every 36 hours.
+
+Observations:
+- Heap usage grows from roughly 200MB at startup to 1.8GB before OOM kill
+- Growth rate increases during periods of high email volume
+- Heap dump analysis shows accumulation of unreleased email template objects
+- Suspected cause: template cache is not evicting stale entries
+
+Next Steps:
+Review template caching implementation. Evaluate adding TTL-based eviction or bounding the cache size.
