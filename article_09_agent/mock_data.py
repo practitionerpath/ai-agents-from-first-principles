@@ -23,7 +23,7 @@ STORE_POLICIES = {
 
 # ---------------------------------------------------------------------------
 # CUSTOMERS
-# Six customers. Five base scenarios plus one for Article 11 failure modes.
+# Six customers. Five base scenarios plus one for failure mode scenarios.
 # Lookup by email (primary) or phone (secondary).
 # ---------------------------------------------------------------------------
 
@@ -68,7 +68,7 @@ CUSTOMERS = {
         "account_tier":  "standard",
         "member_since":  "2023-07-18"
     },
-    # CUST-006: added for Article 11 failure mode scenarios.
+    # CUST-006: added for failure mode scenarios.
     # Kept separate from base customers to avoid contaminating clean scenarios.
     "david.kim@email.com": {
         "customer_id":   "CUST-006",
@@ -232,7 +232,7 @@ ORDERS = {
         "notes":             "Delivered 2024-01-07. Return window closes 2024-02-06. 5 days remaining."
     },
 
-    # --- Article 11 failure mode scenarios ---
+    # --- Failure mode scenarios ---
 
     "ORD-1009": {
         # Scenario: ambiguous delivery status
@@ -421,7 +421,7 @@ TRANSACTIONS = {
     },
 
     "TXN-5010": {
-        # ORD-1009 kitchen blender, ambiguous delivery (Article 11)
+        # ORD-1009 kitchen blender, ambiguous delivery
         "transaction_id":   "TXN-5010",
         "order_id":         "ORD-1009",
         "customer_email":   "david.kim@email.com",
@@ -435,7 +435,7 @@ TRANSACTIONS = {
     },
 
     "TXN-5011": {
-        # ORD-1010 smartwatch, wrong amount charged (Article 11)
+        # ORD-1010 smartwatch, wrong amount charged
         # Charged $89.99 instead of correct sale price $79.99
         "transaction_id":   "TXN-5011",
         "order_id":         "ORD-1010",

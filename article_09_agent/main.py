@@ -88,16 +88,16 @@ TEST_MESSAGES = {
     "9 - No identifying info": (
         "My order hasn't arrived and I'm really frustrated. Can someone help me?"
     ),
-    "10 - Article 11: ambiguous delivery": (
+    "10 - Ambiguous delivery": (
         "I was told my blender (ORD-1009) was delivered on January 30th "
         "but I never received it. There was nothing at my door. "
         "david.kim@email.com"
     ),
-    "11 - Article 9: resolution preference clarification": (
+    "11 - Resolution preference clarification": (
         "Hi, I'm having trouble with a recent order and I'm not sure what "
         "to do. Can someone help me figure out the right next step?"
     ),
-    "12 - Article 9: unstructured delivery note": (
+    "12 - Unstructured delivery note": (
         "Hello, I never got my package and I'm not sure who to contact "
         "about it. Can you help me look into this?"
     )

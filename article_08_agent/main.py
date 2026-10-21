@@ -70,7 +70,7 @@ TEST_MESSAGES = {
     "9 - No identifying info": (
         "My order hasn't arrived and I'm really frustrated. Can someone help me?"
     ),
-    "10 - Article 11: ambiguous delivery": (
+    "10 - Ambiguous delivery": (
         "I was told my blender (ORD-1009) was delivered on January 30th "
         "but I never received it. There was nothing at my door. "
         "david.kim@email.com"

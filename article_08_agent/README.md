@@ -1,4 +1,4 @@
-# article_08_agent
+# ai-agents-from-first-principles / article_08_agent
 
 ## Activate
 ```bash

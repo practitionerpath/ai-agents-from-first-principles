@@ -1,4 +1,4 @@
-# article_01_agent
+# ai-agents-from-first-principles / article_01_agent
 
 ## Activate
 
@@ -7,11 +7,6 @@ source ../.venv/bin/activate
 ```
 
 ## Run Order
-
-```bash
-python3 tools.py
-```
-Confirms the Wikipedia search tool works independently before the agent loop touches it.
 
 ```bash
 python3 main.py
